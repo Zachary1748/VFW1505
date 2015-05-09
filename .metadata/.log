@@ -321,3 +321,133 @@ java.lang.IllegalMonitorStateException: attempt to unlock read lock, not locked 
 !MESSAGE Errors occurred while refreshing git index
 !SUBENTRY 1 com.aptana.core 4 128 2015-05-05 20:06:06.569
 !MESSAGE fatal: bad revision 'HEAD'
+
+!ENTRY com.aptana.git.core 4 1 2015-05-09 16:26:25.036
+!MESSAGE Errors occurred while refreshing git index
+!SUBENTRY 1 com.aptana.core 4 0 2015-05-09 16:26:25.036
+!MESSAGE Cannot run program "/usr/bin/git" (in directory "/Users/Zachary/Documents/Full Sail/VFW/Projects"): error=7, Argument list too long
+!STACK 0
+java.io.IOException: Cannot run program "/usr/bin/git" (in directory "/Users/Zachary/Documents/Full Sail/VFW/Projects"): error=7, Argument list too long
+	at java.lang.ProcessBuilder.processException(ProcessBuilder.java:478)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:457)
+	at com.aptana.core.util.ProcessRunner.startProcess(ProcessRunner.java:165)
+	at com.aptana.core.util.ProcessRunner.doRun(ProcessRunner.java:146)
+	at com.aptana.core.util.ProcessRunner.run(ProcessRunner.java:85)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:279)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:254)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:248)
+	at com.aptana.git.core.model.GitExecutable.runInBackground(GitExecutable.java:362)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1575)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1538)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1533)
+	at com.aptana.git.core.model.GitIndex$UntrackedFilesRefreshJob.call(GitIndex.java:1030)
+	at com.aptana.git.core.model.GitIndex$UntrackedFilesRefreshJob.call(GitIndex.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: java.io.IOException: error=7, Argument list too long
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 17 more
+!SUBENTRY 1 com.aptana.core 4 0 2015-05-09 16:26:25.039
+!MESSAGE Cannot run program "/usr/bin/git" (in directory "/Users/Zachary/Documents/Full Sail/VFW/Projects"): error=7, Argument list too long
+!STACK 0
+java.io.IOException: Cannot run program "/usr/bin/git" (in directory "/Users/Zachary/Documents/Full Sail/VFW/Projects"): error=7, Argument list too long
+	at java.lang.ProcessBuilder.processException(ProcessBuilder.java:478)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:457)
+	at com.aptana.core.util.ProcessRunner.startProcess(ProcessRunner.java:165)
+	at com.aptana.core.util.ProcessRunner.doRun(ProcessRunner.java:146)
+	at com.aptana.core.util.ProcessRunner.run(ProcessRunner.java:85)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:279)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:254)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:248)
+	at com.aptana.git.core.model.GitExecutable.runInBackground(GitExecutable.java:362)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1575)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1538)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1533)
+	at com.aptana.git.core.model.GitIndex$UnstagedFilesRefreshJob.call(GitIndex.java:995)
+	at com.aptana.git.core.model.GitIndex$UnstagedFilesRefreshJob.call(GitIndex.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: java.io.IOException: error=7, Argument list too long
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 17 more
+!SUBENTRY 1 com.aptana.core 4 0 2015-05-09 16:26:25.039
+!MESSAGE Cannot run program "/usr/bin/git" (in directory "/Users/Zachary/Documents/Full Sail/VFW/Projects"): error=7, Argument list too long
+!STACK 0
+java.io.IOException: Cannot run program "/usr/bin/git" (in directory "/Users/Zachary/Documents/Full Sail/VFW/Projects"): error=7, Argument list too long
+	at java.lang.ProcessBuilder.processException(ProcessBuilder.java:478)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:457)
+	at com.aptana.core.util.ProcessRunner.startProcess(ProcessRunner.java:165)
+	at com.aptana.core.util.ProcessRunner.doRun(ProcessRunner.java:146)
+	at com.aptana.core.util.ProcessRunner.run(ProcessRunner.java:85)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:279)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:254)
+	at com.aptana.core.util.ProcessRunner.runInBackground(ProcessRunner.java:248)
+	at com.aptana.git.core.model.GitExecutable.runInBackground(GitExecutable.java:362)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1575)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1538)
+	at com.aptana.git.core.model.GitRepository.execute(GitRepository.java:1533)
+	at com.aptana.git.core.model.GitIndex$StagedFilesRefreshJob.call(GitIndex.java:954)
+	at com.aptana.git.core.model.GitIndex$StagedFilesRefreshJob.call(GitIndex.java:1)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: java.io.IOException: error=7, Argument list too long
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:53)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:91)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:452)
+	... 17 more
+
+!ENTRY com.aptana.index.core 4 0 2015-05-09 16:26:25.448
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  Index error in readCategoryTable. 
+file = /Users/Zachary/Documents/Full Sail/VFW/Projects/.metadata/.plugins/com.aptana.index.core/337847323.index 
+offset = 132 
+ size = 1,952,539,186
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.<init>(HashMap.java:187)
+	at java.util.HashMap.<init>(HashMap.java:199)
+	at com.aptana.internal.index.core.DiskIndex.readCategoryTable(DiskIndex.java:1109)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategory(DiskIndex.java:795)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategories(DiskIndex.java:768)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:929)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.query(Index.java:535)
+	at com.aptana.js.internal.core.index.JSIndexReader.getFunctions(JSIndexReader.java:305)
+	at com.aptana.js.core.index.JSIndexQueryHelper.getGlobals(JSIndexQueryHelper.java:171)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:689)
+	at com.aptana.js.core.parsing.ast.JSIdentifierNode.accept(JSIdentifierNode.java:33)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:584)
+	at com.aptana.js.core.parsing.ast.JSGetPropertyNode.accept(JSGetPropertyNode.java:34)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:584)
+	at com.aptana.js.core.parsing.ast.JSGetPropertyNode.accept(JSGetPropertyNode.java:34)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:772)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:606)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:359)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:420)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer$1.map(JSSymbolTypeInferrer.java:289)
