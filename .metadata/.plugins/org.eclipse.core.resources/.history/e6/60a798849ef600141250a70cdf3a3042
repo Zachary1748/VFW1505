@@ -18,7 +18,7 @@ var arrayTextLabel = Ti.UI.createLabel ({
 	text: "",
 	color: "#000",
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-	font: {fontStyle: "italic", fontFamily: "Arial", fontSize: 20}
+	font: {fontStyle: "italic", fontFamily: "arial", fontSize: 20}
 });
 
 // Next Btn
@@ -34,7 +34,7 @@ var nextTextLabel = Ti.UI.createLabel ({
 	text: "NEXT",
 	color: "#000",
 	textAlign: "center",
-	font: {fontWeight: "bold", fontFamily: "Arial"}
+	font: {fontWeight: "bold", fontFamily: "arial"}
 });
 
 // Previous Btn
@@ -50,7 +50,7 @@ var prevTextLabel = Ti.UI.createLabel ({
 	text: "PREVIOUS",
 	color: "#000",
 	textAlign: "center",
-	font: {fontWeight: "bold", fontFamily: "Arial"}
+	font: {fontWeight: "bold", fontFamily: "arial"}
 });
 
 var neededFiles = require("externalResources");
