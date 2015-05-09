@@ -451,3 +451,176 @@ java.lang.OutOfMemoryError: Java heap space
 	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:359)
 	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:420)
 	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer$1.map(JSSymbolTypeInferrer.java:289)
+
+!ENTRY com.aptana.index.core 4 0 2015-05-09 16:27:00.785
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  Index error in readCategoryTable. 
+file = /Users/Zachary/Documents/Full Sail/VFW/Projects/.metadata/.plugins/com.aptana.index.core/337847323.index 
+offset = 132 
+ size = 1,952,539,186
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.<init>(HashMap.java:187)
+	at java.util.HashMap.<init>(HashMap.java:199)
+	at com.aptana.internal.index.core.DiskIndex.readCategoryTable(DiskIndex.java:1109)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategory(DiskIndex.java:795)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategories(DiskIndex.java:768)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:929)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.query(Index.java:535)
+	at com.aptana.js.internal.core.index.JSIndexReader.getFunctions(JSIndexReader.java:305)
+	at com.aptana.js.core.index.JSIndexQueryHelper.getGlobals(JSIndexQueryHelper.java:171)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:689)
+	at com.aptana.js.core.parsing.ast.JSIdentifierNode.accept(JSIdentifierNode.java:33)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:584)
+	at com.aptana.js.core.parsing.ast.JSGetPropertyNode.accept(JSGetPropertyNode.java:34)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:584)
+	at com.aptana.js.core.parsing.ast.JSGetPropertyNode.accept(JSGetPropertyNode.java:34)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:772)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:606)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:359)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:420)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer$1.map(JSSymbolTypeInferrer.java:289)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-05-09 16:27:04.271
+!MESSAGE An internal error occurred during: "Building workspace".
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.<init>(HashMap.java:187)
+	at java.util.HashMap.<init>(HashMap.java:199)
+	at com.aptana.internal.index.core.DiskIndex.readCategoryTable(DiskIndex.java:1109)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategory(DiskIndex.java:795)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategories(DiskIndex.java:768)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:929)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.query(Index.java:535)
+	at com.aptana.js.internal.core.index.JSIndexReader.getFunctions(JSIndexReader.java:305)
+	at com.aptana.js.core.index.JSIndexQueryHelper.getGlobals(JSIndexQueryHelper.java:171)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:689)
+	at com.aptana.js.core.parsing.ast.JSIdentifierNode.accept(JSIdentifierNode.java:33)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:584)
+	at com.aptana.js.core.parsing.ast.JSGetPropertyNode.accept(JSGetPropertyNode.java:34)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:584)
+	at com.aptana.js.core.parsing.ast.JSGetPropertyNode.accept(JSGetPropertyNode.java:34)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:277)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.getTypes(JSNodeTypeInferrer.java:258)
+	at com.aptana.js.core.inferencing.JSNodeTypeInferrer.visit(JSNodeTypeInferrer.java:772)
+	at com.aptana.js.core.parsing.ast.JSInvokeNode.accept(JSInvokeNode.java:31)
+	at com.aptana.js.core.parsing.ast.JSTreeWalker.visit(JSTreeWalker.java:176)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.processValues(JSSymbolTypeInferrer.java:606)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:359)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer.getSymbolPropertyElement(JSSymbolTypeInferrer.java:420)
+	at com.aptana.js.internal.core.inferencing.JSSymbolTypeInferrer$1.map(JSSymbolTypeInferrer.java:289)
+
+!ENTRY com.aptana.index.core 4 0 2015-05-09 16:27:04.624
+!MESSAGE (Build 3.4.1.201410281727) [ERROR]  Index error in readCategoryTable. 
+file = /Users/Zachary/Documents/Full Sail/VFW/Projects/.metadata/.plugins/com.aptana.index.core/337847323.index 
+offset = 132 
+ size = 1,952,539,186
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.<init>(HashMap.java:187)
+	at java.util.HashMap.<init>(HashMap.java:199)
+	at com.aptana.internal.index.core.DiskIndex.readCategoryTable(DiskIndex.java:1109)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategory(DiskIndex.java:795)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategories(DiskIndex.java:768)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:929)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.core.build.UnifiedBuilder.buildEnding(UnifiedBuilder.java:230)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:201)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-05-09 16:27:06.628
+!MESSAGE An internal error occurred during: "Building workspace".
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+	at java.util.HashMap.<init>(HashMap.java:187)
+	at java.util.HashMap.<init>(HashMap.java:199)
+	at com.aptana.internal.index.core.DiskIndex.readCategoryTable(DiskIndex.java:1109)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategory(DiskIndex.java:795)
+	at com.aptana.internal.index.core.DiskIndex.mergeCategories(DiskIndex.java:768)
+	at com.aptana.internal.index.core.DiskIndex.mergeWith(DiskIndex.java:929)
+	at com.aptana.index.core.Index.save(Index.java:698)
+	at com.aptana.index.core.Index.save(Index.java:671)
+	at com.aptana.core.internal.build.IndexBuildParticipant.buildEnding(IndexBuildParticipant.java:84)
+	at com.aptana.core.internal.build.LazyBuildParticipant.buildEnding(LazyBuildParticipant.java:67)
+	at com.aptana.core.build.UnifiedBuilder.buildEnding(UnifiedBuilder.java:230)
+	at com.aptana.core.build.UnifiedBuilder.build(UnifiedBuilder.java:201)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-05-09 16:27:12.119
+!MESSAGE An internal error occurred during: "Sending Analytics Ping ...".
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.getAnalyticsLogger(DefaultAnalyticsEventHandler.java:207)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.sendEventSync(DefaultAnalyticsEventHandler.java:241)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler$1.run(DefaultAnalyticsEventHandler.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SESSION 2015-05-09 16:27:15.428 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/Zachary/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/Zachary/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-05-09 16:27:17.373
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2015-05-09 16:27:17.518
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-05-09 16:27:17.518
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2015-05-09 16:27:17.519
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-05-09 16:39:32.665
+!MESSAGE An internal error occurred during: "Sending Analytics Ping ...".
+!STACK 0
+java.lang.NullPointerException
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.getAnalyticsLogger(DefaultAnalyticsEventHandler.java:207)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler.sendEventSync(DefaultAnalyticsEventHandler.java:241)
+	at com.aptana.usage.internal.DefaultAnalyticsEventHandler$1.run(DefaultAnalyticsEventHandler.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
