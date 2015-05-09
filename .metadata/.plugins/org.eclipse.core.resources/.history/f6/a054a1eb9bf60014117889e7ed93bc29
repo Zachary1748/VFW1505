@@ -1,0 +1,27 @@
+var codingLanguages = ["HTML","CSS","JavaScript","C Sharp","PHP","Objective C","Swift","Java"];
+
+arrayTextLabel = codingLanguages[0];
+var currentArray = 0;
+
+var nextArray = function(){
+	if () {
+		
+	} else {
+		
+	}
+	
+	arrayTextLabel = codingLanguages[currentArray];
+};
+
+var prevArray = function(){
+	if (currentArray == 0) {
+		
+	} else {
+		
+	}
+	
+	arrayTextLabel = codingLanguages[currentArray];
+};
+
+nextView.addEventListener("click", nextArray);
+previousView.addEventListener("click", prevArray);
