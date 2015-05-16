@@ -1,0 +1,36 @@
+Logger started at: Saturday, May 16, 2015 4:15:28 PM CDT
+Component: com.appcelerator.titanium.ios.core
+Version: 1.0.0.1411756658
+[15:28.267] Sent: >21*1431810928268*version<
+[15:28.268] Recv: >1431810928268*2*3.6.0<
+[15:28.268] Sent: >36*1431810928269*option*monitorXHR*true<
+[15:28.269] Recv: >1431810928269<
+[15:28.269] Sent: >45*1431810928270*option*stepFiltersEnabled*false<
+[15:28.269] Recv: >1431810928270<
+[15:28.269] Sent: >45*1431810928271*option*suspendOnFirstLine*false<
+[15:28.270] Recv: >1431810928271<
+[15:28.270] Sent: >46*1431810928272*option*suspendOnExceptions*false<
+[15:28.270] Recv: >1431810928272<
+[15:28.270] Sent: >41*1431810928273*option*suspendOnErrors*true<
+[15:28.271] Recv: >1431810928273<
+[15:28.271] Sent: >43*1431810928274*option*suspendOnKeywords*true<
+[15:28.271] Recv: >1431810928274<
+[15:28.271] Sent: >45*1431810928275*option*bypassConstructors*false<
+[15:28.271] Recv: >1431810928275<
+[15:28.272] Sent: >45*1431810928276*option*stepFiltersEnabled*false<
+[15:28.272] Recv: >1431810928276<
+[15:28.272] Sent: >30*1431810928277*detailFormatters<
+[15:28.272] Recv: >1431810928277<
+[15:28.273] Sent: >20*1431810928278*enable<
+[15:28.273] Recv: >1431810928278<
+[15:28.279] Recv: >threads*created*0*kroll$1<
+[15:28.282] Recv: >log*out*[DEBUG] Loading: /Users/Zachary/Library/Developer/CoreSimulator/Devices/3A32C30E-89C6-4CF6-8594-9A07FBBB12E6/data/Containers/Bundle/Application/2CD9BA11-A2E0-4304-B919-E22B68E73EF5/Gover_Zachary_Project2.app/app.js, Resource: app_js<
+[15:28.282] Recv: >scripts*created*1|app:/app.js||1|35<
+[15:28.283] Recv: >resumed*0*started<
+[15:28.289] Recv: >suspended*0*exception*app:/app.js*32<
+[15:28.289] Sent: >22*1431810928279*frames*0<
+[15:28.289] Recv: >1431810928279*0|||app:/app.js|32|false|0|0<
+[15:29.326] Sent: >34*1431810928280*variables*0*frame[0]<
+[15:29.326] Recv: >1431810928280*backEndSection|object|nol|[object TiUITableViewSection]*frontEndSection|object|nol|[object TiUITableViewSection]*languages|object|nol|[object TiUITableView]*languagesSections|object|wnol|[object Array]*mainWindow|object|nol|[object TiUIWindow]*navWindow|object|nol|[object TiUIiOSNavWindow]<
+[15:36.905] Sent: >10**terminate<
+----------End of file----------
