@@ -1527,3 +1527,6 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/Zachary/
 
 !ENTRY com.aptana.js.debug.core 1 0 2015-05-16 16:15:28.268
 !MESSAGE Extension version: 3.6.0; protocol v2
+
+!ENTRY com.aptana.js.debug.core 1 0 2015-05-16 20:34:52.100
+!MESSAGE Extension version: 3.6.0; protocol v2

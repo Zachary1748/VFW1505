@@ -2,7 +2,7 @@
 Titanium.UI.setBackgroundColor('#000');
 
 var languageData = {
-	"front-end":{
+	"frontend":{
 		"languages":[
 			{
 				"name": "HTML",
@@ -18,7 +18,7 @@ var languageData = {
 			}
 		]
 	},
-	"back-end":{
+	"backend":{
 		"languages":[
 			{
 				"name": "PHP",
@@ -62,6 +62,32 @@ var backEndSection = Ti.UI.createTableViewSection ({
 	headerTitle: "Back-end",
 	footerTitle: "Server Side Languages"
 });
+
+for (var n in languageData){
+	for(var item in languageData[n]){
+		if(n === "frontend"){
+			for (var i = 0; i<languageData[n][item].length; i++){
+				var currentRow = Ti.UI.createTableViewRow ({
+					title: languageData[n][item][i].name,
+					description: languageData[n][item][i].description
+				});
+				
+				frontEndSection.add(currentRow);
+			}
+		}
+		
+		if(n === "backend"){
+			for (var i = 0; i<languageData[n][item].length; i++){
+				var currentRow = Ti.UI.createTableViewRow ({
+					title: languageData[n][item][i].name,
+					description: languageData[n][item][i].description
+				});
+				
+				backEndSection.add(currentRow);
+			}
+		}
+	}
+}
 
 var languageSections = [frontEndSection,backEndSection];
 languages.setData(languageSections);
