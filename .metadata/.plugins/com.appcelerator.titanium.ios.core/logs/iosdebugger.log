@@ -1,32 +1,33 @@
-Logger started at: Saturday, May 16, 2015 8:34:52 PM CDT
+Logger started at: Wednesday, May 20, 2015 7:32:17 PM CDT
 Component: com.appcelerator.titanium.ios.core
 Version: 1.0.0.1411756658
-[34:52.99] Sent: >21*1431826492099*version<
-[34:52.99] Recv: >1431826492099*2*3.6.0<
-[34:52.100] Sent: >45*1431826492100*option*stepFiltersEnabled*false<
-[34:52.100] Recv: >1431826492100<
-[34:52.100] Sent: >36*1431826492101*option*monitorXHR*true<
-[34:52.101] Recv: >1431826492101<
-[34:52.101] Sent: >45*1431826492102*option*suspendOnFirstLine*false<
-[34:52.101] Recv: >1431826492102<
-[34:52.101] Sent: >46*1431826492103*option*suspendOnExceptions*false<
-[34:52.102] Recv: >1431826492103<
-[34:52.102] Sent: >41*1431826492104*option*suspendOnErrors*true<
-[34:52.102] Recv: >1431826492104<
-[34:52.102] Sent: >43*1431826492105*option*suspendOnKeywords*true<
-[34:52.102] Recv: >1431826492105<
-[34:52.102] Sent: >45*1431826492106*option*bypassConstructors*false<
-[34:52.103] Recv: >1431826492106<
-[34:52.103] Sent: >45*1431826492107*option*stepFiltersEnabled*false<
-[34:52.103] Recv: >1431826492107<
-[34:52.103] Sent: >30*1431826492108*detailFormatters<
-[34:52.103] Recv: >1431826492108<
-[34:52.104] Sent: >20*1431826492109*enable<
-[34:52.104] Recv: >1431826492109<
-[34:52.110] Recv: >threads*created*0*kroll$1<
-[34:52.116] Recv: >log*out*[DEBUG] Loading: /Users/Zachary/Library/Developer/CoreSimulator/Devices/3A32C30E-89C6-4CF6-8594-9A07FBBB12E6/data/Containers/Bundle/Application/60B6C592-1A5A-41E2-870B-9EEB9249EA45/Gover_Zachary_Project2.app/app.js, Resource: app_js<
-[34:52.116] Recv: >scripts*created*1|app:/app.js||1|96<
-[34:52.116] Recv: >resumed*0*started<
-[34:52.187] Recv: >log*out*[DEBUG] Loading: /Users/Zachary/Library/Developer/CoreSimulator/Devices/3A32C30E-89C6-4CF6-8594-9A07FBBB12E6/data/Containers/Bundle/Application/60B6C592-1A5A-41E2-870B-9EEB9249EA45/Gover_Zachary_Project2.app/_app_props_.json, Resource: _app_props__json<
-[34:52.198] Recv: >log*out*[DEBUG] Application booted in 181.272984 ms<
+[32:17.828] Sent: >21*1432168337829*version<
+[32:17.829] Recv: >1432168337829*2*3.6.0<
+[32:17.830] Sent: >36*1432168337830*option*monitorXHR*true<
+[32:17.831] Recv: >1432168337830<
+[32:17.831] Sent: >45*1432168337831*option*stepFiltersEnabled*false<
+[32:17.832] Recv: >1432168337831<
+[32:17.832] Sent: >45*1432168337832*option*suspendOnFirstLine*false<
+[32:17.832] Recv: >1432168337832<
+[32:17.832] Sent: >46*1432168337833*option*suspendOnExceptions*false<
+[32:17.832] Recv: >1432168337833<
+[32:17.832] Sent: >41*1432168337834*option*suspendOnErrors*true<
+[32:17.833] Recv: >1432168337834<
+[32:17.833] Sent: >43*1432168337835*option*suspendOnKeywords*true<
+[32:17.833] Recv: >1432168337835<
+[32:17.833] Sent: >45*1432168337836*option*bypassConstructors*false<
+[32:17.834] Recv: >1432168337836<
+[32:17.834] Sent: >45*1432168337837*option*stepFiltersEnabled*false<
+[32:17.834] Recv: >1432168337837<
+[32:17.834] Sent: >30*1432168337838*detailFormatters<
+[32:17.834] Recv: >1432168337838<
+[32:17.835] Sent: >20*1432168337839*enable<
+[32:17.835] Recv: >1432168337839<
+[32:17.841] Recv: >threads*created*0*kroll$1<
+[32:17.846] Recv: >log*out*[DEBUG] Loading: /Users/Zachary/Library/Developer/CoreSimulator/Devices/3A32C30E-89C6-4CF6-8594-9A07FBBB12E6/data/Containers/Bundle/Application/6A4693B9-F585-45B6-9F7B-03748DE236A7/Gover_Zachary_Project3.app/app.js, Resource: app_js<
+[32:17.847] Recv: >scripts*created*1|app:/app.js||1|31<
+[32:17.848] Recv: >resumed*0*started<
+[32:17.892] Recv: >log*out*[DEBUG] Loading: /Users/Zachary/Library/Developer/CoreSimulator/Devices/3A32C30E-89C6-4CF6-8594-9A07FBBB12E6/data/Containers/Bundle/Application/6A4693B9-F585-45B6-9F7B-03748DE236A7/Gover_Zachary_Project3.app/_app_props_.json, Resource: _app_props__json<
+[32:17.894] Recv: >log*out*[DEBUG] Application booted in 191.833019 ms<
+[32:18.423] Recv: >log*out*[INFO] Forcing rotation to 4. Current Orientation 1. This is not good UI design. Please reconsider.<
 ----------End of file----------

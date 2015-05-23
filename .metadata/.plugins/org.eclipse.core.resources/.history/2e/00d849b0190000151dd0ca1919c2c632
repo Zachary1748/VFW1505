@@ -1,0 +1,74 @@
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+var gallery = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var galleryList = gallery.getDirectoryListing();
+var rowCount = 4;
+var margin = 5;
+var trueCanvasWidth = "";
+var size = "";
+
+var showImage = function(dataSource){
+	var descriptionWindow = Ti.UI.createWindow ({
+		title: dataSource.title,
+		backgroundColor: "fff"
+	});
+	var descriptionText = Ti.UI.createLabel ({
+		text: dataSource.text,
+		top: 30,
+		left: 20,
+		right: 20,
+		color: "333",
+		font: {fontSize: "16", fontFamily: "Arial"}
+	});
+	descriptionWindow.add(descriptionText);
+	navWindow.openWindow(descriptionWindow);
+};
+
+var mainWin = Ti.UI.createWindow ({
+	title: "Project 3",
+	backgroundColor: "F0F0F0"
+});
+
+var mainWinView = Ti.UI.createView ({
+	left: 30,
+	right: 30,
+	height: 100
+});
+
+var mainWinLabel = Ti.UI.createLabel ({
+	text: "View Images"
+});
+
+var win = Ti.UI.createWindow({
+	backgroundColor: 'f0f0f0',
+	title: 'Images',
+	orientationModes: [
+		Ti.UI.PORTRAIT,
+		Ti.UI.LANDSCAPE_LEFT,
+		Ti.UI.LANDSCAPE_RIGHT
+	],
+	layout: "vertical"
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWin
+});
+
+for (var i = 0; i<galleryList.length; i++){
+	var imgItem = Ti.UI.createImageView({
+		image: 'images/' + galleryList[i],
+		width: 200,
+		top: 20
+	});
+	
+	win.add(imgItem);
+}
+
+//mainWinView.addEventListener("click", win.open());
+// languages.addEventListener("click", function(event){
+	// showImage(event.source);
+// });
+
+mainWinView.add(mainWinLabel);
+mainWin.add(mainWinView);
+mainWin.open();

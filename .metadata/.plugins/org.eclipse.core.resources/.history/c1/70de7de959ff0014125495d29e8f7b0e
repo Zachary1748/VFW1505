@@ -1,0 +1,64 @@
+// this sets the background color of the master UIView (when there are no windows/tab groups on it)
+Titanium.UI.setBackgroundColor('#000');
+
+var mainWindow = Ti.UI.createWindow ({
+	title: "Programming",
+	backgroundColor: "#f0f0f0",
+});
+
+var navWindow = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWindow
+});
+
+var languages = Ti.UI.createTableView ({
+	
+});
+
+if (Ti.Platform.name === "iPhone OS") {
+	languages.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
+}
+
+var showDescription = function(){
+	var descriptionWindow = Ti.UI.createWindow ({
+		title: this.title,
+		backgroundColor: "fff"
+	});
+	var descriptionText = Ti.UI.createLabel ({
+		text: this.text,
+		top: 30,
+		left: 20,
+		right: 20,
+		color: "333",
+		font: {fontSize: "16", fontFamily: "Arial"}
+	});
+	descriptionWindow.add(descriptionText);
+	navWindow.openWindow(descriptionWindow);
+};
+
+for (var n in languageData){
+	var tableSection = Ti.UI.createTableViewSection ({
+		headerTitle: "Back-end",
+		footerTitle: "Server Side Languages"
+	});
+	for(var item in languageData[n]){
+		for (var i = 0; i<languageData[n][item].length; i++){
+			var currentRow = Ti.UI.createTableViewRow ({
+				title: languageData[n][item][i].name,
+				text: languageData[n][item][i].description,
+				hasChild: true
+			});
+			
+			currentRow.addEventListener("click", showDescription);
+			
+			tableSection.add(currentRow);
+		}
+	}
+}
+
+var neededFiles = require("externalResources");
+
+var languageSections = [tableSection];
+languages.setData(languageSections);
+
+mainWindow.add(languages);
+navWindow.open();

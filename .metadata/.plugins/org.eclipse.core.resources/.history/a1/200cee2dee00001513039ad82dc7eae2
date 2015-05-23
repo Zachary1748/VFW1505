@@ -1,0 +1,102 @@
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+var gallery = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var galleryList = gallery.getDirectoryListing();
+var rowCount = 2;
+var margin = 5;
+var trueCanvasWidth = "";
+var size = (pWidth - (margin * (rowCount+1))) / rowCount;
+var globalOrientation = [
+	Ti.UI.PORTRAIT,
+	Ti.UI.LANDSCAPE_LEFT,
+	Ti.UI.LANDSCAPE_RIGHT
+];
+
+// Window 2
+var showImages = function(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: '333',
+		title: 'Images',
+		orientationModes: globalOrientation,
+		layout: "horizontal"
+	});
+	win.add(viewContainer);
+	navWin.openWindow(win);
+};
+
+// Window 3
+var showImageFull = function(dataSource) {
+	var imageFull = Ti.UI.createWindow({
+		backgroundColor: '333',
+		title: dataSouce.title,
+		orientationModes: globalOrientation
+	});
+	
+	var presentImage = Ti.UI.createImageView ({
+		image: dataSource
+	});
+	
+	navWin.openWindow(imageFull);
+};
+
+// Window 1
+var mainWin = Ti.UI.createWindow ({
+	title: "Project 3",
+	backgroundColor: "F0F0F0",
+	orientationModes: globalOrientation
+});
+
+var navWin = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWin
+});
+
+var mainWinView = Ti.UI.createView ({
+	left: 30,
+	right: 30,
+	height: 100,
+	backgroundColor: "fff",
+	borderRadius: 10
+});
+
+var mainWinLabel = Ti.UI.createLabel ({
+	text: "View Images",
+	font: {fontWeight: "bold", fontSize: 17}
+});
+
+mainWinView.add(mainWinLabel);
+
+var viewContainer = Ti.UI.createScrollView ({
+	width: pWidth,
+	height: pHeight-70,
+	contentWidth: pWidth,
+	layout: "horizontal",
+	showVerticalIndicator: true
+});
+
+for (var i = 0; i<galleryList.length; i++){
+	// Window 2
+	var imageView = Ti.UI.createView ({
+		width: size,
+		height: size,
+		left: margin,
+		top: margin,
+		borderRadius: 10
+	});
+	var currentImage = Ti.UI.createImageView({
+		image: 'images/' + galleryList[i],
+		top: 0,
+		width: size*2
+	});
+	
+	imageView.add(currentImage);
+	viewContainer.add(imageView);
+}
+
+mainWinView.addEventListener("click", showImages);
+
+viewContainer.addEventListener("click", function(event){
+	showFullImage(event);
+});
+
+mainWin.add(mainWinView);
+navWin.open();

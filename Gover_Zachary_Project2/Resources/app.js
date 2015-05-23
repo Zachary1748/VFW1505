@@ -18,20 +18,7 @@ if (Ti.Platform.name === "iPhone OS") {
 	languages.style = Ti.UI.iPhone.TableViewStyle.GROUPED;
 }
 
-var frontEndSection = Ti.UI.createTableViewSection ({
-	headerTitle: "Front-end",
-	footerTitle: "Client Side Languages"
-});
-
-var backEndSection = Ti.UI.createTableViewSection ({
-	headerTitle: "Back-end",
-	footerTitle: "Server Side Languages"
-});
-
 var neededFiles = require("externalResources");
-
-var languageSections = [frontEndSection,backEndSection];
-languages.setData(languageSections);
 
 mainWindow.add(languages);
 navWindow.open();

@@ -1,0 +1,31 @@
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+var gallery = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, "images");
+var galleryList = gallery.getDirectoryListing();
+var rowCount = 4;
+var margin = 5;
+var trueCanvasWidth = "";
+var size = "";
+
+var win = Ti.UI.createWindow({
+	backgroundColor: '#f0f0f0',
+	title: 'Project 3',
+	orientationModes: [
+		Ti.UI.PORTRAIT,
+		Ti.UI.LANDSCAPE_LEFT,
+		Ti.UI.LANDSCAPE_RIGHT
+	],
+	layout: "vertical"
+});
+
+for (var i = 0; i<galleryList.length; i++){
+	var imgItem = Ti.UI.createImageView({
+		image: 'images/' + galleryList[i],
+		width: 200,
+		top: 20
+	});
+	
+	win.add(imgItem);
+}
+
+win.open();

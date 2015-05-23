@@ -1,6 +1,6 @@
 var languageData = {
-	"frontend":{
-		"languages":[
+	"Front-End":{
+		"List of Languages":[
 			{
 				"name": "HTML",
 				"description": "Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages."
@@ -15,8 +15,8 @@ var languageData = {
 			}
 		]
 	},
-	"backend":{
-		"languages":[
+	"Back-End":{
+		"List of Languages":[
 			{
 				"name": "PHP",
 				"description": "PHP is a script language and interpreter that is freely available and used primarily on Linux Web servers. PHP, originally derived from Personal Home Page Tools, now stands for PHP: Hypertext Preprocessor, which the PHP FAQ describes as a 'recursive acronym.'"
@@ -33,13 +33,13 @@ var languageData = {
 	}
 };
 
-var showDescription = function(){
+var showDescription = function(dataSource){
 	var descriptionWindow = Ti.UI.createWindow ({
-		title: this.title,
+		title: dataSource.title,
 		backgroundColor: "fff"
 	});
 	var descriptionText = Ti.UI.createLabel ({
-		text: this.text,
+		text: dataSource.text,
 		top: 30,
 		left: 20,
 		right: 20,
@@ -50,34 +50,56 @@ var showDescription = function(){
 	navWindow.openWindow(descriptionWindow);
 };
 
+var languageSections = [];
 for (var n in languageData){
+	// Custom Header
+	var customHeader = Ti.UI.createView ({
+		height: 40
+	});
+	var chText = Ti.UI.createLabel ({
+		text: n,
+		left: 10,
+		font: {fontWeight: "bold"}
+	});
+	customHeader.add(chText);
+	
+	// Custom Footer
+	var customFooter = Ti.UI.createView ({
+		height: 30
+	});
+	var cfText = Ti.UI.createLabel ({
+		text: "Descriptions from Wikipedia",
+		left: 10,
+		font: {fontSize: 13},
+		color: 333
+	});
+	customFooter.add(cfText);
+	
+	// Create Section and rows
+	var currentSection = Ti.UI.createTableViewSection ({
+		headerView: customHeader,
+		footerView: customFooter
+	});
 	for(var item in languageData[n]){
-		if(n === "frontend"){
-			for (var i = 0; i<languageData[n][item].length; i++){
-				var currentRow = Ti.UI.createTableViewRow ({
-					title: languageData[n][item][i].name,
-					text: languageData[n][item][i].description,
-					hasChild: true
-				});
-				
-				currentRow.addEventListener("click", showDescription);
-				
-				frontEndSection.add(currentRow);
-			}
-		}
-		
-		if(n === "backend"){
-			for (var i = 0; i<languageData[n][item].length; i++){
-				var currentRow = Ti.UI.createTableViewRow ({
-					title: languageData[n][item][i].name,
-					text: languageData[n][item][i].description,
-					hasChild: true
-				});
-				
-				currentRow.addEventListener("click", showDescription);
-				
-				backEndSection.add(currentRow);
-			}
+		for (var i = 0; i<languageData[n][item].length; i++){
+			var currentRow = Ti.UI.createTableViewRow ({
+				title: languageData[n][item][i].name,
+				text: languageData[n][item][i].description,
+				hasChild: true
+			});
+			
+			//currentRow.addEventListener("click", showDescription);
+			
+			currentSection.add(currentRow);
 		}
 	}
+	languageSections.push(currentSection);
 }
+languages.setData(languageSections);
+languages.addEventListener("click", function(event){
+	showDescription(event.source);
+});
+
+
+
+
