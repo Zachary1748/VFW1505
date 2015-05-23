@@ -31,7 +31,7 @@ var mainWinView = Ti.UI.createView ({
 
 var mainWinLabel = Ti.UI.createLabel ({
 	text: "View Images",
-	font: {fontWeight: "bold", fontSize: 17, fontFamily: "Arial"}
+	font: {fontWeight: "bold", fontSize: 17}
 });
 
 mainWinView.add(mainWinLabel);
