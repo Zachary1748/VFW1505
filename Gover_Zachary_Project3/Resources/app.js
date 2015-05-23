@@ -11,43 +11,6 @@ var globalOrientation = [
 	Ti.UI.LANDSCAPE_RIGHT
 ];
 
-// Window 2
-var showImages = function(){
-	var win = Ti.UI.createWindow({
-		backgroundColor: '333',
-		title: 'Images',
-		orientationModes: globalOrientation,
-		layout: "horizontal"
-	});
-	win.add(viewContainer);
-	navWin.openWindow(win);
-};
-
-// Window 3
-var showImageFull = function(dataSource) {
-	var imageFull = Ti.UI.createWindow({
-		backgroundColor: '333',
-		title: dataSource.title,
-		orientationModes: globalOrientation
-	});
-	
-	var imgFullScroll = Ti.UI.createScrollView ({
-		width: pWidth,
-		height: pHeight-70
-	});
-	
-	var presentImage = Ti.UI.createImageView ({
-		image: dataSource.image,
-		left: 30,
-		right: 30
-	});
-	
-	imgFullScroll.add(presentImage);
-	imageFull.add(imgFullScroll);
-	navWin.openWindow(imageFull);
-};
-
-// Window 1
 var mainWin = Ti.UI.createWindow ({
 	title: "Project 3",
 	backgroundColor: "F0F0F0",
@@ -81,31 +44,7 @@ var viewContainer = Ti.UI.createScrollView ({
 	showVerticalIndicator: true
 });
 
-for (var i = 0; i<galleryList.length; i++){
-	// Window 2
-	var imageView = Ti.UI.createView ({
-		width: size,
-		height: size,
-		left: margin,
-		top: margin,
-		borderRadius: 10
-	});
-	var currentImage = Ti.UI.createImageView({
-		image: 'images/' + galleryList[i],
-		title: galleryList[i],
-		top: 0,
-		width: size*2
-	});
-	
-	imageView.add(currentImage);
-	viewContainer.add(imageView);
-}
-
-mainWinView.addEventListener("click", showImages);
-
-viewContainer.addEventListener("click", function(data){
-	showImageFull(data.source);
-});
+var neededFiles = require("externalResources");
 
 mainWin.add(mainWinView);
 navWin.open();
