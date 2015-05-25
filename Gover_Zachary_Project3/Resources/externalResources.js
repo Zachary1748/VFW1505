@@ -16,19 +16,12 @@ var showImageFull = function(dataSource) {
 		orientationModes: globalOrientation
 	});
 	
-	var imgFullScroll = Ti.UI.createScrollView ({
-		width: pWidth,
-		height: pHeight-70
-	});
-	
 	var presentImage = Ti.UI.createImageView ({
 		image: dataSource.image,
 		left: 30,
 		right: 30
 	});
-	
-	imgFullScroll.add(presentImage);
-	imageFull.add(imgFullScroll);
+	imageFull.add(presentImage);
 	navWin.openWindow(imageFull);
 };
 
