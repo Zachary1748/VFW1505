@@ -1,0 +1,30 @@
+function showGallery(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: '333',
+		title: 'Images'
+	});
+	win.add(viewContainer);
+	navWin.openWindow(win);
+}
+
+function showCrew(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: '333',
+		title: 'Images'
+	});
+	win.add(viewContainer);
+	navWin.openWindow(win);
+}
+
+function showCustomPage(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: '333',
+		title: 'Images'
+	});
+	win.add(viewContainer);
+	navWin.openWindow(win);
+}
+
+galleryView.addEventListener("click", showGallery);
+crewView.addEventListener("click", showCrew);
+customPageView.addEventListener("click", showCustomPage);
