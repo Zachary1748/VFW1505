@@ -1,0 +1,50 @@
+var homeFont = {fontSize: 24, fontFamily: "Arial", fontWeight: "normal"};
+
+var mainWin = Ti.UI.createWindow ({
+	title: "VFW Final Project",
+	backgroundColor: "333",
+	layout: "vertical"
+});
+
+var navWin = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWin
+});
+
+var galleryView = Ti.UI.createView ({
+	height: 80,
+	backgroundColor: "rgb(170,49,100)"
+});
+
+var galleryLabel = Ti.UI.createLabel ({
+	text: "GALLERY",
+	color: "FFF",
+	font: homeFont
+});
+galleryView.add(galleryLabel);
+
+var crewView = Ti.UI.createView ({
+	height: 80,
+	backgroundColor: "rgb(199,102,91)"
+});
+
+var crewLabel = Ti.UI.createLabel ({
+	text: "CREW",
+	color: "FFF",
+	font: homeFont
+});
+crewView.add(crewLabel);
+
+var customPageView = Ti.UI.createView ({
+	height: 80,
+	backgroundColor: "rgb(104,138,152)"
+});
+
+var customPageLabel = Ti.UI.createLabel ({
+	text: "CUSTOM PAGE",
+	color: "FFF",
+	font: homeFont
+});
+customPageView.add(customPageLabel);
+
+mainWin.add(galleryView, crewView, customPageView);
+navWin.open();

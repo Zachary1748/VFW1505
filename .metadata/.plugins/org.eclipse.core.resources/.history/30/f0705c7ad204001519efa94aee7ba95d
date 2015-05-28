@@ -1,0 +1,15 @@
+function showGallery(){
+	
+}
+
+function showCrew(){
+	
+}
+
+function showCustomPage(){
+	
+}
+
+galleryView.addEventListener("click", showGallery);
+crewView.addEventListener("click", showCrew);
+customPageView.addEventListener("click", showCustomPage);

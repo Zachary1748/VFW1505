@@ -1,0 +1,9 @@
+var mainWin = Ti.UI.createWindow ({
+	title: "Project 4",
+	backgroundColor: "F0F0F0",
+	orientationModes: globalOrientation
+});
+
+var navWin = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWin
+});

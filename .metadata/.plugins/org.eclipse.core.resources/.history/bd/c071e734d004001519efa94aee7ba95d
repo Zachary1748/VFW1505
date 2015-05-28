@@ -1,0 +1,33 @@
+var mainWin = Ti.UI.createWindow ({
+	title: "VFW Final Project",
+	backgroundColor: "333"
+});
+
+var navWin = Ti.UI.iOS.createNavigationWindow ({
+	window: mainWin
+});
+
+var galleryView = Ti.UI.createView ({
+	
+});
+
+var galleryLabel = Ti.UI.createLabel ({
+	text: "Gallery"
+});
+
+var crewView = Ti.UI.createView ({
+	
+});
+
+var crewLabel = Ti.UI.createLabel ({
+	text: "Crew"
+});
+
+var customPageView = Ti.UI.createView ({
+	
+});
+
+var customPageLabel = Ti.UI.createLabel ({
+	text: "Custom Page"
+});
+
