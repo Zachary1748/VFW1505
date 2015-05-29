@@ -133,7 +133,7 @@ function showCustomPage(){
 	
 	var nounLabel2 = Ti.UI.createLabel ({
 		top: 20,
-		text: "Please enter a noun:",
+		text: "Please enter an adjective:",
 		left: 20
 	});
 	
