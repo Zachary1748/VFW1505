@@ -13,7 +13,7 @@ var languageData = {
 				"description": "Peter Griffin is the main character of the American animated sitcom Family Guy. He is voiced by cartoonist Seth MacFarlane and first appeared on television, along with the rest of the family, in the 15-minute short on December 20, 1998.",
 				"image": "Peter_Griffin.png",
 				"stupidity": 80,
-				"courage": 90
+				"courage": 50
 			},
 			{
 				"name": "Patrick Star",
