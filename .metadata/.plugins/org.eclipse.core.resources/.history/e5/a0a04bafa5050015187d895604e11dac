@@ -1,0 +1,21 @@
+function showCustomPage(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: "rgb(104,138,152)",
+		title: "Custom Page",
+		layout: "vertical"
+	});
+	
+	var textField = Ti.UI.createTextField ({
+		top: 20,
+		hintText: "Please enter your name",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	});
+	
+	win.add(textField);
+	navWin.openWindow(win);
+}
+customPageView.addEventListener("click", showCustomPage);

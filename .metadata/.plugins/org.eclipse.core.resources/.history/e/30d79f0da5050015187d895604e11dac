@@ -1,0 +1,8 @@
+function showCustomPage(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: "rgb(104,138,152)",
+		title: "Custom Page"
+	});
+	navWin.openWindow(win);
+}
+customPageView.addEventListener("click", showCustomPage);

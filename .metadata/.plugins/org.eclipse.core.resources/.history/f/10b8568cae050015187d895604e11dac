@@ -1,0 +1,230 @@
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+
+function showCustomPage(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: "rgb(104,138,152)",
+		title: "Custom Page",
+		layout: "vertical"
+	});
+	
+	var scrollView = Ti.UI.createScrollView ({
+		layout: "vertical",
+		width: "100%",
+		height: "100%",
+		contentWidth: "100%",
+		showVerticalIndicator: true
+	});
+	
+	var instruct = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please fill out the form below and be rewarded with a hillarious story.",
+		left: 20,
+		font: {fontSize: 12, fontFamily: "Arial"}
+	});
+	
+	var adjLabel1 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please enter an adjective:",
+		left: 20
+	});
+	
+	var adjText1 = Ti.UI.createTextField ({
+		top: 5,
+		hintText: "Please enter an adjective",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderRadius: 3,
+		borderColor: "333",
+		paddingLeft: 10, paddingRight: 10
+	});
+	
+	var nounLabel1 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please enter a noun:",
+		left: 20
+	});
+	
+	var nounText1 = Ti.UI.createTextField ({
+		top: 5,
+		hintText: "Please enter a noun",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderRadius: 3,
+		borderColor: "333",
+		paddingLeft: 10, paddingRight: 10
+	});
+	
+	var pluralNounLabel1 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please enter a Plural Noun:",
+		left: 20
+	});
+	
+	var pluralNounText1 = Ti.UI.createTextField ({
+		top: 5,
+		hintText: "Please enter a Plural Noun",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderRadius: 3,
+		borderColor: "333",
+		paddingLeft: 10, paddingRight: 10
+	});
+	
+	var personLabel1 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please enter a persons name:",
+		left: 20
+	});
+	
+	var personText1 = Ti.UI.createTextField ({
+		top: 5,
+		hintText: "Please enter a persons name",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderRadius: 3,
+		borderColor: "333",
+		paddingLeft: 10, paddingRight: 10
+	});
+	
+	var ajdLabel2 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please enter an adjective:",
+		left: 20
+	});
+	
+	var adjText2 = Ti.UI.createTextField ({
+		top: 5,
+		hintText: "Please enter an adjective",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderRadius: 3,
+		borderColor: "333",
+		paddingLeft: 10, paddingRight: 10
+	});
+	
+	var clothingLabel1 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please enter a artical of clothing:",
+		left: 20
+	});
+	
+	var clothingText1 = Ti.UI.createTextField ({
+		top: 5,
+		hintText: "Please enter a artical of clothing",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderRadius: 3,
+		borderColor: "333",
+		paddingLeft: 10, paddingRight: 10
+	});
+	
+	var nounLabel2 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please enter an adjective:",
+		left: 20
+	});
+	
+	var nounText2 = Ti.UI.createTextField ({
+		top: 5,
+		hintText: "Please enter a noun",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderRadius: 3,
+		borderColor: "333",
+		paddingLeft: 10, paddingRight: 10
+	});
+	
+	var cityLabel1 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please pick a city:",
+		left: 20
+	});
+	
+	var cityPicker1 = Ti.UI.createPicker ({
+		top: 5,
+		left: 20, right: 20,
+		height: "auto"
+	});
+	
+	var data = [];
+	data[0]=Ti.UI.createPickerRow({title:'Austin'});
+	data[1]=Ti.UI.createPickerRow({title:'Houston'});
+	data[2]=Ti.UI.createPickerRow({title:'San Antonia'});
+	data[3]=Ti.UI.createPickerRow({title:'Dallas'});
+	
+	cityPicker1.add(data);
+	cityPicker1.selectionIndicator = true;
+	
+	var submitBtn = Ti.UI.createView ({
+		backgroundColor: "333",
+		height: 50,
+		top: 20,
+		width: "100%"
+	});
+	
+	var submitText = Ti.UI.createLabel ({
+		text: "Submit Results",
+		color: "fff",
+		font: {fontSize: 16, fontFamily: "Arial"}
+	});
+	submitBtn.add(submitText);
+	
+	scrollView.add(instruct,
+				   adjLabel1,
+				   adjText1,
+				   nounLabel1,
+				   nounText1,
+				   pluralNounLabel1,
+				   pluralNounText1,
+				   personLabel1,
+				   personText1,
+				   ajdLabel2,
+				   adjText2,
+				   clothingLabel1,
+				   clothingText1,
+				   nounLabel2,
+				   nounText2,
+				   cityLabel1,
+				   cityPicker1,
+				   submitBtn);
+	cityPicker1.setSelectedRow(0, 2, false);
+	win.add(scrollView);
+	navWin.openWindow(win);
+	
+	submitBtn.addEventListener("return", function(args){
+		var resultWin = Ti.UI.createWindow ({
+			backgroundColor: "rgb(104,138,152)",
+			title: "Results"
+		});
+		
+		var resultText = Ti.UI.createLabel({
+			text: ""
+		});
+		
+		var madLibsResult = "There are many "+ajdText1.value+" ways to choose a/an "+nounText1.value+" to read. First, you could ask "+
+							"for recommendations from your friends and "+pluralNounText1.value+". Just don't ask Aunt "+personText1.value+
+							" --she only reads "+ajdText2.value+" books with "+clothingText1.value+" -ripping goddesses on the cover. "+
+							"If your friends and family are no help, try checking out the "+nounText2.value+" review in The "+cityPicker1.getSelectedRow(0).title+
+							" Times.";
+		resultText.text = madLibsResult;
+		
+		resultWin.add(resultText);
+		navWin.openWindow(resultWin);
+	});
+}
+customPageView.addEventListener("click", showCustomPage);

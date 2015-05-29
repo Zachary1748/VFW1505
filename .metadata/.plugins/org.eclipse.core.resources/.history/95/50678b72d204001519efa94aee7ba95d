@@ -1,3 +1,0 @@
-galleryView.addEventListener("click", showGallery);
-crewView.addEventListener("click", showCrew);
-customPageView.addEventListener("click", showCustomPage);

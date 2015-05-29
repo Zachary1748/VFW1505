@@ -1,0 +1,79 @@
+var pWidth = Ti.Platform.displayCaps.platformWidth;
+var pHeight = Ti.Platform.displayCaps.platformHeight;
+
+function showCustomPage(){
+	var win = Ti.UI.createWindow({
+		backgroundColor: "rgb(104,138,152)",
+		title: "Custom Page",
+		layout: "vertical"
+	});
+	
+	var scrollView = Ti.UI.createScrollView ({
+		layout: "vertical",
+		width: pWidth,
+		height: pHeight-70,
+		contentWidth: pWidth,
+		showVerticalIndicator: true
+	});
+	
+	var instruct = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please fill out the form below and be rewarded with a hillarious story.",
+		left: 20
+	});
+	
+	var adjLabel1 = Ti.UI.createLabel ({
+		top: 20,
+		text: "Please enter an adjective:",
+		left: 20
+	});
+	
+	var adjText1 = Ti.UI.createTextField ({
+		top: 5,
+		hintText: "Please enter your name",
+		backgroundColor: "rgba(250,250,250,0.4)",
+		left: 20, right: 20,
+		height: 45,
+		color: "000",
+		borderRadius: 3,
+		borderColor: "333",
+		paddingLeft: 10, paddingRight: 10
+	});
+	
+	var sumbitBtn = Ti.UI.createView ({
+		backgroundColor: "333",
+		height: 50,
+		bottom: 0,
+		width: "100%"
+	});
+	
+	var submitText = Ti.UI.createLabel ({
+		text: "Submit Results",
+		font: {fontSize: 16, fontFamily: "Arial"}
+	});
+	
+	scrollView.add(instruct,
+				   adjLabel1,
+				   adjText1,
+				   nounLabel1,
+				   nounText1,
+				   pluralNounLabel1,
+				   pluralNounText1,
+				   personLabel1,
+				   personText1,
+				   ajdLabel2,
+				   adjText2,
+				   clothingLabel1,
+				   clothingText1,
+				   nounLabel2,
+				   nounText2,
+				   cityLabel1,
+				   cityPicker1);
+	win.add(scrollView);
+	navWin.openWindow(win);
+	
+	scrollView.addEventListener("return", function(args){
+		
+	});
+}
+customPageView.addEventListener("click", showCustomPage);
